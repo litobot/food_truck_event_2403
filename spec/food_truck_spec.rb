@@ -22,6 +22,8 @@ RSpec.describe FoodTruck do
       food_truck = FoodTruck.new("Rocky Mountain Pies")
       
       expect(food_truck.inventory).to eq({})
+      # Does it get initialized with an inventory? (attribute?)
+        # Or is this a separate method?
     end
     
   end
@@ -32,7 +34,9 @@ RSpec.describe FoodTruck do
     item2 = Item.new({name: 'Apple Pie (Slice)', price: '$2.50'})
     
     expect(food_truck.check_stock(item1)).to eq(0)
-    
+    # I want to return '0' when I call a method called #check_stock on food_truck
+    # Do I need to 
+
     food_truck.stock(item1, 30)
     
     expect(food_truck.inventory).to eq({item1: 30})
